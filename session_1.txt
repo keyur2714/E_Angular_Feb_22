@@ -1,0 +1,44 @@
+
+	
+	<app-root></app-root> -custom tag - custom element
+
+	for each component
+
+		1. .ts file - compoent/controller
+		2. .html file - view / template
+		3. .css file - part of view / css for template
+		4. .spec file - unit testing file - optional
+
+
+		@Component - Decorator
+	
+			selector : <tag/element name>
+			templateurl : path
+			styleurl: path
+		
+		
+	
+	component will not be exist withouot module
+	
+		@NgModule
+
+			declarations [
+				you need to declate compoennt	
+			],
+			imports [
+				import dependant module here
+				BrowserModule //				
+			]
+			exports [
+			]
+			providers [
+			]
+			bootstrap [
+				define compoent which you want to load in sp				
+			]
+
+
+
+			
+
+
