@@ -1,0 +1,24 @@
+<div class="container">
+   <div class="row">
+     <div class="col">
+       <h1>Profile Demo</h1>
+     </div>
+   </div>
+   <div class="row">
+     <div class="col-sm-8">
+       <app-personal-details></app-personal-details>       
+     </div>
+   </div>
+   <div class="row">
+     <div class="col">
+      <app-education-details></app-education-details>
+     </div>
+   </div>
+   <div class="row">
+     <div class="col">
+       <li *ngFor="let name of friends">
+         {{name}}
+        </li>       
+     </div>
+   </div>
+</div>

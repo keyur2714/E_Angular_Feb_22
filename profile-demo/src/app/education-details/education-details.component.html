@@ -1,0 +1,32 @@
+<div class="card">
+    <div class="card-header bg-warning text-dark">
+        Education Details
+    </div>
+    <div class="card-body">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Qualification</th>
+                    <th>Percentage</th>
+                    <th>Grade</th>
+                    <th>University</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let education of educationList">
+                    <td>{{education.year}}</td>
+                    <td>{{education.qualification}}</td>
+                    <td>{{education.per}}</td>
+                    <td *ngIf="education.grade === 'Dist'">
+                        <b>{{education.grade}}</b>
+                    </td>
+                    <td *ngIf="education.grade !== 'Dist'">
+                        {{education.grade}}
+                    </td>
+                    <td>{{education.university}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
