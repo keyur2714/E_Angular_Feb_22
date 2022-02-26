@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col">
+        Enter Friend Name : 
+    </div>
+    <div class="col">
+        <input type="text" name="friend" class="form-control" [(ngModel)]="friendName">
+    </div>
+    <div class="col">
+        <!-- {{friendName}} -->
+        <button class="btn btn-info" (click)="addFriend()">Add Friend</button>
+    </div>
+</div>
+<div class="row m-5">
+    <div class="col">
+        <ul>
+            <li *ngFor="let friend of friends;let i=index">
+                {{friend}}
+                <button class="btn btn-danger" (click)="delete(i)">Delete</button>
+            </li>            
+        </ul>
+    </div>
+</div>

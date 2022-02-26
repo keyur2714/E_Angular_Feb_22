@@ -1,0 +1,29 @@
+<div class="row m-2">
+    <div class="col">
+        Enter First Number : 
+    </div>
+    <div class="col">
+        <input type="number" name="no1" class="form-control" #no1>
+    </div>
+</div>
+<div class="row m-2">
+    <div class="col">
+        Enter Second Number :        
+    </div>
+    <div class="col">
+        <input type="number" name="no2" class="form-control" #no2>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <button class="btn btn-info m-1" (click)="add(no1.value,no2.value)">+</button>
+        <button class="btn btn-warning m-1" (click)="sub(no1.value,no2.value)">-</button>
+        <button class="btn btn-danger m-1" (click)="mul(no1.value,no2.value)">*</button>
+        <button class="btn btn-success m-1" (click)="div(no1.value,no2.value)">/</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        Result is : {{result}}
+    </div>    
+</div>
