@@ -1,0 +1,61 @@
+<div class="row m-2">
+    <div class="col-sm-4">
+        Customer # :
+    </div>
+    <div class="col-sm-4">
+        <input type="text" name="id" class="form-control" [(ngModel)]="customer.id">
+    </div>
+</div>
+<div class="row m-2">
+    <div class="col-sm-4">
+        Customer Name :
+    </div>
+    <div class="col-sm-4">
+        <input type="text" name="name" class="form-control" [(ngModel)]="customer.name">
+    </div>
+</div>
+<div class="row m-2">
+    <div class="col-sm-4">
+        Mobile No:
+    </div>
+    <div class="col-sm-4">
+        <input type="text" name="mobileNo" class="form-control" [(ngModel)]="customer.mobileNo">
+    </div>
+</div>
+<div class="row m-2">
+    <div class="col-sm-4">
+        Email :
+    </div>
+    <div class="col-sm-4">
+        <input type="text" name="email" class="form-control" [(ngModel)]="customer.email">
+    </div>
+</div>
+<div class="row m-2">
+    <div class="col-sm-4">
+        <button class="btn btn-info" (click)="save()" *ngIf="customer.id === -1">Save</button>
+        <button class="btn btn-info" (click)="save()" *ngIf="customer.id !== -1">Update</button>
+    </div>
+</div>
+<hr>
+<table class="table table-bordered bg-dark text-info">
+    <thead>
+        <tr>
+            <th>Customer #</th>
+            <th>Name</th>
+            <th>Mobile No</th>
+            <th>Email</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let customer of customerList;let i=index;">
+            <td>{{customer.id}}</td>
+            <td>{{customer.name}}</td>
+            <td>{{customer.mobileNo}}</td>
+            <td>{{customer.email}}</td>
+            <td>
+                <button class="btn btn-success" (click)="edit(i)">Edit</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
