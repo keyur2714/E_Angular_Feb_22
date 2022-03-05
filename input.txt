@@ -1,0 +1,27 @@
+
+	
+	Component Communications
+
+	if i want to pass data from one component to another component
+
+
+	<app-message></app-message> -- custom tag/element/component
+
+
+	<button type=submit name="nm" (click)="save()">OK</button>
+
+	first we want to create custom property of our component
+	
+	
+
+	<app-message message="Hi"></app-message>
+
+	app.component.html
+			
+		<app-message message="Hi"></app-message>
+
+	passing data from parent to child
+
+		@Input() - @angular/core -we need to import from here
+
+

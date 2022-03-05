@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>
+        @Input() Demo
+      </h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <app-message></app-message>
+    </div>
+    <div class="col">
+      <app-message [message]="msg" message-type="danger"></app-message>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <app-message message="Hello World...!"></app-message>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <app-message *ngFor="let m of msgList" [message]="m" [message-type]="'primary'"></app-message>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col">
+      <select name="selectPerson" [(ngModel)]="selectedPerson" class="form-control">        
+        <option [ngValue]="selectedPerson">{{selectedPerson.name}}</option>
+        <option *ngFor="let p of personList" [ngValue]="p">{{p.name}}</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <app-personal-info bg-color="warning" color="dark"></app-personal-info>
+    </div>
+    <div class="col" *ngIf="selectedPerson.id !== 0">
+      <app-personal-info [person]="selectedPerson" [color]="'info'"></app-personal-info>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-6">
+      <app-personal-info *ngFor="let p of personList" [person]="p"></app-personal-info>
+    </div>
+  </div>
+</div>
