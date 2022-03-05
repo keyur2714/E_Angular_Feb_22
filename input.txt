@@ -24,4 +24,20 @@
 
 		@Input() - @angular/core -we need to import from here
 
+	
+	<app-my-table
+		[dataList]="deptList"
+		[headerList]="headerlist"
+		[fieldList]="fieldList"
+			
+	>
+	<app-my-table>
+
+	id name designation deptName
+
+
+		
+
+
+
 
