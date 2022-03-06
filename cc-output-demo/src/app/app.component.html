@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>
+        @Output Demo
+      </h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <app-message
+        message="Good Morning...!"
+        (reverse)="getChildMsg($event)"
+      >
+    </app-message>
+    </div>
+    <div class="col">
+      <app-message
+        [message]="revMsg"
+        message-type="success"
+      >        
+      </app-message>
+    </div>
+  </div>
+</div>

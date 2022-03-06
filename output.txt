@@ -1,0 +1,29 @@
+a.component.html
+
+<button type=submit name=btn (click)="sayHello()">OK<button>
+
+a.component.ts
+
+	sayHello(){
+	}
+
+button.component.ts
+
+	click(){return : sayHello()}
+
+
+
+app.component.html
+
+<app-message 
+	message="Hi"
+	message-type="info"
+	(reverseMsg)="getMsg()"
+>
+</app-message>
+
+@Output() - @angular/core
+
+app.component.ts
+
+getMsg()
