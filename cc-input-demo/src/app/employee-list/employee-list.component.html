@@ -1,0 +1,38 @@
+<!-- <div class="card">
+    <div class="card-header bg-dark text-info">
+        Manage Employees
+    </div>
+    <div class="card-body">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Employee #</th>
+                    <th>Name</th>
+                    <th>Designation</th>
+                    <th>Salary</th>
+                    <th>Dept Id</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let emp of empList">
+                    <td>{{emp.id}}</td>
+                    <td>{{emp.name}}</td>
+                    <td>{{emp.designation}}</td>
+                    <td>{{emp.salary}}</td>
+                    <td>{{emp.deptId}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div> -->
+<app-my-data-grid
+    [data-list]="empList"
+    [header-list]="headerList"
+    [field-list]="fieldList"
+    table-header="Manage Employees"
+    bg-color="dark"
+    text-color="info"
+>
+</app-my-data-grid>
+
+<!-- {{empList | json}} -->

@@ -1,0 +1,33 @@
+<!-- <div class="card">
+    <div class="card-header bg-info text-white">
+        Manage Departments
+    </div>
+    <div class="card-body">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Department #</th>
+                    <th>Code</th>
+                    <th>Name</th>                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let dept of deptList">
+                    <td>{{dept.id}}</td>
+                    <td>{{dept.deptCode}}</td>
+                    <td>{{dept.deptName}}</td>                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div> -->
+
+<app-my-data-grid
+    [data-list]="deptList"
+    [header-list]="headerList"
+    [field-list]="fieldList"
+    table-header="Manage Departments"
+    bg-color="warning"
+    text-color="dark"
+>
+</app-my-data-grid>
