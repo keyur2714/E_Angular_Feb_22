@@ -27,3 +27,29 @@ app.component.html
 app.component.ts
 
 getMsg()
+
+
+	registration.component.html
+
+		name
+		
+		country :: mydropdown --- countryList
+
+		states :: mydropdown --- satesList
+
+
+	save
+		
+
+
+
+
+
+
+
+
+
+
+
+
+

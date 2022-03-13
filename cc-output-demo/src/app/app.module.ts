@@ -3,14 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { MessageComponent } from './message/message.component';
+import { UserRegistrationComponent } from './user-registration/user-registration.component';
+import { MyDropdownComponent } from './my-dropdown/my-dropdown.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MessageComponent
+    MessageComponent,
+    UserRegistrationComponent,
+    MyDropdownComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

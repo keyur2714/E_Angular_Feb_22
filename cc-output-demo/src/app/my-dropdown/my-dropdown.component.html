@@ -1,0 +1,11 @@
+<div class="row m-1">
+    <div class="col-sm-4">
+        <ng-content></ng-content>
+    </div>
+    <div class="col-sm-4">
+        <select name="{{label}}" [(ngModel)]="selectedItem" class="form-control" (change)="returnItem()">
+            <option value="-1">-:Select Country:-</option>
+            <option *ngFor="let data of dataList" [ngValue]="data">{{data.name}}</option>
+        </select>
+    </div>
+</div>
