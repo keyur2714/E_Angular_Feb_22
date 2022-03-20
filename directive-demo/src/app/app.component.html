@@ -1,0 +1,21 @@
+<div class="container" appMyStyle>
+  <div class="row">
+    <div class="col">
+      <h1 appMyStyle color="green">@Directive Demo</h1>
+    </div>
+    <div class="col">
+      <p appMyStyle [color]="'orange'" [font-size]="fontSize">Hello Radhe Krishna...!</p>
+    </div>
+  </div>
+  <div class="row" *appMyIf="true">
+    <div class="col">
+      <input type="text" name="str1" appTxtStyle appMyStyle>
+    </div>
+    <div class="col">
+      <input type="text" name="str2" appTxtStyle appMyStyle>
+    </div>
+  </div>
+  <div *appMyLoop="loopCounter">
+    <p appMyStyle color="green">Hello...!</p>
+  </div>
+</div>
