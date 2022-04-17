@@ -1,0 +1,25 @@
+{
+  "course": [
+    {
+      "id": 1,
+      "code": "ANG",
+      "name": "Angular",
+      "fees": 13800,
+      "trainerName": "Keyur"
+    },
+    {
+      "id": 2,
+      "code": "BDH",
+      "name": "Big Data Hadoop",
+      "fees": 14800,
+      "trainerName": "Vaibhav"
+    },
+    {
+      "id": 4,
+      "code": "JAVA",
+      "name": "Advance JAVA",
+      "fees": 8800,
+      "trainerName": "Keyur"
+    }
+  ]
+}

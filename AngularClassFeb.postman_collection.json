@@ -1,0 +1,84 @@
+{
+	"variables": [],
+	"info": {
+		"name": "AngularClassFeb",
+		"_postman_id": "625297c0-9267-c63a-607c-84263542db6a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAllCourses",
+			"request": {
+				"url": "http://localhost:3000/course",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getCourseById",
+			"request": {
+				"url": "http://localhost:3000/course/3",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "createNewCourse",
+			"request": {
+				"url": "http://localhost:3000/course",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\":4,\n\t\"code\":\"JAVA\",\n\t\"name\":\"Advance JAVA\",\n\t\"fees\":10800,\n\t\"trainerName\":\"Keyur\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateCourse",
+			"request": {
+				"url": "http://localhost:3000/course/4",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n      \"id\": 4,\n      \"code\": \"JAVA\",\n      \"name\": \"Advance JAVA\",\n      \"fees\": 8800,\n      \"trainerName\": \"Keyur\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCourseById",
+			"request": {
+				"url": "http://localhost:3000/course/3",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

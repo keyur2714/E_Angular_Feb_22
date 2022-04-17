@@ -1,0 +1,39 @@
+<app-course-entry></app-course-entry>
+
+<hr/>
+
+<table class="table table-bordered" bg-dark text-info>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Course Code</th>
+            <th>Course Name</th>
+            <th>Fees</th>
+            <th>Trainer Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let course of courseList">
+            <td>
+                <button class="btn btn-info" (click)="getCourseDetail(course.id)">{{course.id}}</button>
+            </td>
+            <td>{{course.code}}</td>
+            <td>{{course.name}}</td>
+            <td>{{course.fees}}</td>
+            <td>{{course.trainerName}}</td>
+            <td>
+                <button class="btn btn-success m-1">Edit</button>
+                <button class="btn btn-danger m-1">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<hr/>
+<h1>Course Detail of {{selectedCourse.id}}</h1>
+<ul>
+    <li>Code : {{selectedCourse.code}}</li>
+    <li>Name : {{selectedCourse.name}}</li>
+    <li>Fees : {{selectedCourse.fees}}</li>
+    <li>Trainer Name : {{selectedCourse.trainerName}}</li>
+</ul>
