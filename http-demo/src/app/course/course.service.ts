@@ -8,13 +8,20 @@ import { Course } from './course.model';
 })
 export class CourseService {
 
+  appUrl : string = "http://localhost:3000/course";
+
   constructor(private httpClient : HttpClient) { }
 
   getAllCourses() : Observable<Course[]>{
-    return this.httpClient.get<Course[]>("http://localhost:3000/course");
+    return this.httpClient.get<Course[]>(this.appUrl);
   }
 
   getCourseById(id : number) : Observable<Course> {
-    return this.httpClient.get<Course>("http://localhost:3000/course/"+id);
+    alert(id);
+    return this.httpClient.get<Course>(this.appUrl+"/"+id);
+  }
+
+  saveCourse(course : Course) : Observable<Course> {
+    return this.httpClient.post<Course>(this.appUrl,course);
   }
 }

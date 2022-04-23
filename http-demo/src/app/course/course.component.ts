@@ -9,6 +9,7 @@ import { CourseService } from './course.service';
 })
 export class CourseComponent implements OnInit {
 
+  courseId : number = -1;
   courseList : Course[] = [];
   selectedCourse : Course = new Course();
 
@@ -30,6 +31,12 @@ export class CourseComponent implements OnInit {
     );
   }
 
+  refreshData(event) : void {
+    if(event){
+      this.getAllCourses();
+    }
+  }
+
   getCourseDetail(id: number) : void {
     this.courseService.getCourseById(id).subscribe(
       (data : Course)=>{
@@ -41,5 +48,8 @@ export class CourseComponent implements OnInit {
     )
   }
 
+  edit(courseId) : void {
+    this.courseId = courseId;
+  }
 
 }

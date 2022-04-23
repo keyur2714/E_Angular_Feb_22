@@ -19,7 +19,42 @@
       "code": "JAVA",
       "name": "Advance JAVA",
       "fees": 8800,
+      "trainerName": "Denish"
+    },
+    {
+      "id": 5,
+      "code": "SNOWFLAKE",
+      "name": "Snowflake Sql",
+      "fees": 11800,
       "trainerName": "Keyur"
+    },
+    {
+      "id": "6",
+      "code": "PYT",
+      "name": "Python",
+      "fees": "8000",
+      "trainerName": "Jatin"
+    },
+    {
+      "id": "8",
+      "code": "CM",
+      "name": "Capital Market",
+      "fees": "30000",
+      "trainerName": "Sachin"
+    },
+    {
+      "id": "7",
+      "code": "DS",
+      "name": "Data Science",
+      "fees": "12000",
+      "trainerName": "Vikash"
+    },
+    {
+      "id": "9",
+      "code": "BS",
+      "name": "Basics",
+      "fees": "2000",
+      "trainerName": "Chintan"
     }
   ]
 }
