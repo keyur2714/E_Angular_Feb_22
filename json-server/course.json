@@ -25,7 +25,7 @@
       "id": 5,
       "code": "SNOWFLAKE",
       "name": "Snowflake Sql",
-      "fees": 11800,
+      "fees": "12800",
       "trainerName": "Keyur"
     },
     {
@@ -39,7 +39,7 @@
       "id": "8",
       "code": "CM",
       "name": "Capital Market",
-      "fees": "30000",
+      "fees": "35000",
       "trainerName": "Sachin"
     },
     {
