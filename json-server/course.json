@@ -25,7 +25,7 @@
       "id": 5,
       "code": "SNOWFLAKE",
       "name": "Snowflake Sql",
-      "fees": "12800",
+      "fees": "13000",
       "trainerName": "Keyur"
     },
     {
@@ -55,6 +55,13 @@
       "name": "Basics",
       "fees": "2000",
       "trainerName": "Chintan"
+    },
+    {
+      "id": "10",
+      "code": "BD",
+      "name": "Big Data",
+      "fees": "12000",
+      "trainerName": "Vaibhav"
     }
   ]
 }

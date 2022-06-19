@@ -1,36 +1,32 @@
-import {AfterViewInit, Component, ViewChild} from '@angular/core';
-import {MatPaginator} from '@angular/material/paginator';
-import {MatSort} from '@angular/material/sort';
-import {MatTableDataSource} from '@angular/material/table';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 import { CourseService } from './course-service';
 import { Course } from './course.model';
 
-
-/**
- * @title Data table with sorting, pagination, and filtering.
- */
- @Component({
+@Component({
   selector: 'app-manage-course',
   templateUrl: './manage-course.component.html',
   styleUrls: ['./manage-course.component.css']
 })
-export class ManageCourseComponent implements AfterViewInit {
-  displayedColumns: string[] = ['id', 'code', 'name', 'fees', 'trainerName','action'];
-  dataSource: MatTableDataSource<Course> = new MatTableDataSource();
+export class ManageCourseComponent implements OnInit,AfterViewInit {
+
+  displayedColumns: string[] = ['id', 'code', 'name', 'fees', 'trainerName'];
+  dataSource: MatTableDataSource<Course>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor(private courseService : CourseService) {
-    this.getAllCourses();
+  constructor(private courseService : CourseService) {    
   }
 
-  getAllCourses() : void {
+  ngOnInit(): void {
     this.courseService.getAllCourse().subscribe(
       (data)=>{
-        this.dataSource.data = data;
+        this.dataSource = new MatTableDataSource(data); 
       }
-    )
+    )     
   }
 
   ngAfterViewInit() {
@@ -47,4 +43,3 @@ export class ManageCourseComponent implements AfterViewInit {
     }
   }
 }
-
