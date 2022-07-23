@@ -21,6 +21,7 @@ export class CourseService {
  }
 
  saveCourse(course : Course) : Observable<Course> {
+  console.log("1111");
   return this.httpClient.post<Course>(this.appUrl,course);
  }
 
